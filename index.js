@@ -7,9 +7,6 @@ const body = document.body;
 
 
 
-const theme = localStorage.getItem('theme');
-
-
 
 // Button Event Handlers
 
@@ -31,3 +28,9 @@ mintButton.onclick = () => {
     localStorage.setItem('theme', 'mint');
   };
  
+
+const theme = localStorage.getItem('theme');
+
+if (theme) {
+  body.classList.add(theme);
+}
